@@ -1,0 +1,217 @@
+:root {
+    --bg-color: #ffffff;
+    --text-main: #111111;
+    --text-muted: #666666;
+    --border-color: #e5e5e5;
+    --btn-bg: #111111;
+    --btn-hover: #333333;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 3rem 1rem;
+    
+    /* Subtle light-gray dotted pattern */
+    background-image: radial-gradient(#d1d5db 1px, transparent 1px);
+    background-size: 24px 24px;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    background: #ffffff;
+    padding: 3rem;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+header {
+    margin-bottom: 3rem;
+    border-bottom: 2px solid var(--text-main);
+    padding-bottom: 1rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.form-group input, 
+.form-group select {
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    color: var(--text-main);
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus, 
+.form-group select:focus {
+    outline: none;
+    border-color: var(--text-main);
+}
+
+.submit-btn {
+    width: 100%;
+    background: var(--btn-bg);
+    color: #ffffff;
+    border: none;
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.2s;
+}
+
+.submit-btn:hover {
+    background: var(--btn-hover);
+}
+
+.submit-btn:disabled {
+    background: var(--border-color);
+    cursor: not-allowed;
+}
+
+/* Result Section */
+.result-section {
+    margin-top: 3rem;
+    padding-top: 3rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.primary-result {
+    text-align: left;
+    margin-bottom: 3rem;
+}
+
+.result-label {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+}
+
+.result-value {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.main-highlight {
+    font-size: 3.5rem;
+    letter-spacing: -0.02em;
+}
+
+.yield-production {
+    display: flex;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.unit {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.supporting-results {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+@media (max-width: 600px) {
+    .supporting-results, .yield-production {
+        grid-template-columns: 1fr;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+}
+
+.conditions-box h3, .comparison-box h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.subtext {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+}
+
+#conditions-list {
+    list-style: none;
+}
+
+#conditions-list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 0.95rem;
+}
+
+#conditions-list li strong {
+    font-weight: 500;
+}
+
+.season-table, .metrics-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.season-table th, .season-table td,
+.metrics-table th, .metrics-table td {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border-color);
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+.season-table th, .metrics-table th {
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+.metrics-section {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.metrics-section h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+}
